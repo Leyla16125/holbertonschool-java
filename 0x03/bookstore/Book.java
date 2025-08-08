@@ -1,4 +1,3 @@
-package bookstore;
 import exceptions.InvalidAuthorException;
 import exceptions.InvalidBookException;
 
@@ -17,6 +16,14 @@ public class Book {
         return title;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     public void setTitle(String title) throws InvalidBookException {
         if (title == null || title.length() < 3) {
             throw new InvalidBookException("Invalid book title");
@@ -24,19 +31,15 @@ public class Book {
         this.title = title;
     }
 
-    public String getAuthor() {
-        return author;
-    }
-
     public void setAuthor(String author) throws InvalidAuthorException {
-        if (author == null || author.split(" ").length < 2) {
+        if (author == null) {
+            throw new InvalidAuthorException("Invalid author name");
+        }
+        String[] names = author.trim().split("\\s+");
+        if (names.length < 2) {
             throw new InvalidAuthorException("Invalid author name");
         }
         this.author = author;
-    }
-
-    public double getPrice() {
-        return price;
     }
 
     public void setPrice(double price) throws InvalidBookException {

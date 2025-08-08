@@ -1,6 +1,6 @@
-package bookstore;
 public class GoldEditionBook extends Book {
-    public GoldEditionBook(String title, String author, double price) throws InvalidAuthorException, InvalidBookException {
+
+    public GoldEditionBook(String title, String author, double price) throws exceptions.InvalidAuthorException, exceptions.InvalidBookException {
         super(title, author, price);
     }
 
@@ -9,4 +9,3 @@ public class GoldEditionBook extends Book {
         return super.getPrice() * 1.3;
     }
 }
-

@@ -1,5 +1,6 @@
 public class Program {
     public static void main(String[] args) {
+
         try {
             Book book1 = new Book(
                             "Robinson Crusoe",
@@ -31,7 +32,7 @@ public class Program {
 
         try {
             GoldEditionBook goldEditionBook2 = new GoldEditionBook(
-                            "Alice's Adventures in Wonderland",
+                            "Alice’s Adventures in Wonderland",
                             "Lewis Carroll",
                             21.88);
 

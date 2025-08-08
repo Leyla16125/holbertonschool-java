@@ -11,7 +11,6 @@ public class BasicBankAccount {
         this.balance = 0.0;
     }
 
-    // Getters
     public String getAccountNumber() {
         return accountNumber;
     }
@@ -24,7 +23,6 @@ public class BasicBankAccount {
         return annualInterestRate;
     }
 
-    // Methods
     public void deposit(double value) throws InvalidOperationException {
         if (value <= 0) {
             throw new InvalidOperationException("Deposit amount must be greater than 0");
@@ -43,11 +41,8 @@ public class BasicBankAccount {
     }
 
     public double calculateMonthlyFee() {
-        double fee = 0.10 * balance; 
-        if (fee > 10.00) {
-            fee = 10.00;
-        }
-        return fee;
+        double fee = 0.10 * balance;
+        return (fee > 10.00) ? 10.00 : fee;
     }
 
     public double calculateMonthlyInterest() {
@@ -62,5 +57,10 @@ public class BasicBankAccount {
         double fee = calculateMonthlyFee();
         double interest = calculateMonthlyInterest();
         balance = balance - fee + interest;
+    }
+
+    // Protected setter to allow subclasses to modify balance
+    protected void setBalance(double balance) {
+        this.balance = balance;
     }
 }
