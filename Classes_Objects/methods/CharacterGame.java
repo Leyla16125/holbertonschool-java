@@ -1,4 +1,3 @@
-package Classes_Objects.methods;
 
 public class CharacterGame {
     private int currentHealth;
