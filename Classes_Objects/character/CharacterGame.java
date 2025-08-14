@@ -1,6 +1,7 @@
-package Classes_Objects.encapsulation.character;
+package Classes_Objects.character;
 
 public class CharacterGame {
     public int currentHealth;
     public String name;
 }
+
