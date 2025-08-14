@@ -1,4 +1,3 @@
-package Classes_Objects.status;
 
 public class CharacterGame {
     private int currentHealth;
