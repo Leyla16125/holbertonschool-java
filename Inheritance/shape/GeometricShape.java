@@ -1,4 +1,3 @@
-package Inheritance.shape;
 
 public class GeometricShape {
     public double area() {
