@@ -1,19 +1,14 @@
 import products.Product;
 
 public class ItemOrder {
-    private Products product;
+    private Product product;
     private int quantity;
 
-    public ItemOrder(Products product, int quantity) {
+    public ItemOrder(Product product, int quantity) {
         this.product = product;
         this.quantity = quantity;
     }
 
-    public Products getProduct() {
-        return product;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
+    public Product getProduct() { return product; }
+    public int getQuantity() { return quantity; }
 }
