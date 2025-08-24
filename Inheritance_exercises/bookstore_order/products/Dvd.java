@@ -1,6 +1,6 @@
-package products;
 
-public class Dvd extends Product {
+
+public class Dvd extends Products {
     private String director;
     private String genre;
     private int duration;
@@ -13,8 +13,20 @@ public class Dvd extends Product {
         this.duration = duration;
     }
 
+    public String getDirector() {
+        return director;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
     @Override
     public double getNetPrice() {
-        return getGrossPrice() * 1.20; // +20%
+        return getGrossPrice() * 1.20; 
     }
 }
