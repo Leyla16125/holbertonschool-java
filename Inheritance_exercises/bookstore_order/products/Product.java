@@ -29,5 +29,6 @@ public abstract class Products {
         return grossPrice;
     }
 
+    // Abstract method
     public abstract double getNetPrice();
 }
