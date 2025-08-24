@@ -1,6 +1,6 @@
+package products;
 
-
-public class Book extends Products {
+public class Book extends Product {
     private int pages;
     private String author;
     private int edition;
@@ -27,6 +27,6 @@ public class Book extends Products {
 
     @Override
     public double getNetPrice() {
-        return getGrossPrice() * 1.15; // 15% increase
+        return getGrossPrice() * 1.15; 
     }
 }

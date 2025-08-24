@@ -1,6 +1,6 @@
+package products;
 
-
-public class Dvd extends Products {
+public class Dvd extends Product {
     private String director;
     private String genre;
     private int duration;
@@ -27,6 +27,6 @@ public class Dvd extends Products {
 
     @Override
     public double getNetPrice() {
-        return getGrossPrice() * 1.20; 
+        return getGrossPrice() * 1.20; // 20% increase
     }
 }

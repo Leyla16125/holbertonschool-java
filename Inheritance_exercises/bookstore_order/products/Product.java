@@ -1,3 +1,4 @@
+package products;
 
 public abstract class Products {
     private String title;
@@ -28,6 +29,5 @@ public abstract class Products {
         return grossPrice;
     }
 
-    // Abstract method
     public abstract double getNetPrice();
 }
