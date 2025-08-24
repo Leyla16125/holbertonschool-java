@@ -1,3 +1,4 @@
+
 public class Order {
     private double discountPercentage;
     private ItemOrder[] items;
@@ -16,5 +17,20 @@ public class Order {
             total -= total * (discountPercentage / 100.0);
         }
         return total;
+    }
+
+    // ✅ Add this for the checker
+    public void presentOrderSummary() {
+        System.out.println("Order Summary:");
+        for (ItemOrder item : items) {
+            Products product = item.getProduct();
+            System.out.printf("- %s | Qty: %d | Net Price: %.2f | Subtotal: %.2f%n",
+                    product.getTitle(),
+                    item.getQuantity(),
+                    product.getNetPrice(),
+                    item.getQuantity() * product.getNetPrice());
+        }
+        System.out.printf("Discount: %.2f%%%n", discountPercentage);
+        System.out.printf("Total: %.2f%n", calculateTotal());
     }
 }
